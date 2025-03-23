@@ -2,8 +2,10 @@
     /* Core colors */
     --black: #000000;
     --white: #ffffff;
-    --accent: #FF5700;
-    --highlight: #00B2F3;
+    --accent: #FF5700;  /* Bloomberg-inspired orange accent */
+    --highlight: #00B2F3;  /* Bloomberg blue */
+    --category: #FF9F1C;  /* Orange for blog categories */
+    --date: #9DBCD4;  /* Light blue for dates */
     --dark-gray: #131516;
     --light-gray: #f2f2f2;
     
@@ -133,4 +135,214 @@
     .intro p:hover {
       transform: translateY(-2px);
     }
+  }
+  
+  /* Market data visualization and ticker */
+  footer {
+    margin-top: var(--spacing-xl);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: var(--spacing-lg);
+  }
+  
+  .market-graphic {
+    position: relative;
+    width: 100%;
+    height: 200px;
+    margin-top: var(--spacing-lg);
+  }
+  
+  /* Chart styling */
+  .chart-container {
+    position: relative;
+    height: 120px;
+    width: 100%;
+    margin-bottom: var(--spacing-lg);
+  }
+  
+  .chart-line {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    opacity: 0.6;
+  }
+  
+  .chart-line::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, 
+      transparent 0%, 
+      rgba(0, 178, 243, 0.1) 10%,
+      rgba(0, 178, 243, 0.2) 20%, 
+      rgba(0, 178, 243, 0.1) 30%,
+      rgba(0, 178, 243, 0.05) 40%,
+      rgba(0, 178, 243, 0.1) 60%,
+      rgba(0, 178, 243, 0.2) 70%,
+      rgba(0, 178, 243, 0.3) 80%,
+      rgba(0, 178, 243, 0.2) 100%
+    );
+    clip-path: polygon(
+      0% 70%, 
+      10% 45%, 
+      20% 60%, 
+      30% 30%, 
+      40% 40%, 
+      50% 25%, 
+      60% 15%, 
+      70% 30%, 
+      80% 20%, 
+      90% 10%, 
+      100% 10%, 
+      100% 100%, 
+      0% 100%
+    );
+  }
+  
+  .chart-points {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .point {
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    background-color: var(--highlight);
+    border-radius: 50%;
+    left: var(--x);
+    top: var(--y);
+    box-shadow: 0 0 5px rgba(0, 178, 243, 0.8);
+  }
+  
+  /* Blog ticker styling */
+  .ticker-tape {
+    width: 100%;
+    height: 50px;
+    overflow: hidden;
+    background-color: rgba(0, 0, 0, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 4px;
+    position: relative;
+    backdrop-filter: blur(5px);
+  }
+  
+  .ticker-content {
+    display: flex;
+    animation: ticker 60s linear infinite;
+    width: max-content;
+    padding: 0 var(--spacing-md);
+  }
+  
+  .ticker-item {
+    display: flex;
+    align-items: center;
+    padding: 0 var(--spacing-lg);
+    height: 50px;
+    font-family: var(--font-primary);
+    font-size: 0.9rem;
+    font-weight: 600;
+    white-space: nowrap;
+    color: rgba(255, 255, 255, 0.7);
+    position: relative;
+  }
+  
+  .ticker-item .category {
+    margin-left: var(--spacing-sm);
+    font-weight: 700;
+    color: var(--category);
+    background: rgba(255, 159, 28, 0.1);
+    padding: 2px 8px;
+    border-radius: 3px;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+  
+  .ticker-item .post-title {
+    margin-left: var(--spacing-sm);
+    font-weight: 500;
+    color: var(--white);
+  }
+  
+  .ticker-item .date {
+    margin-left: var(--spacing-sm);
+    font-size: 0.8rem;
+    color: var(--date);
+    font-weight: 400;
+  }
+  
+  @keyframes ticker {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+  
+  /* Grid lines for chart */
+  .chart-container::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-image: 
+      linear-gradient(to right, rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+    background-size: 50px 25px;
+    pointer-events: none;
+  }
+  
+  /* Media queries for responsive design */
+  @media (max-width: 768px) {
+    .market-graphic {
+      height: 180px;
+    }
+    
+    .chart-container {
+      height: 100px;
+    }
+    
+    .ticker-tape {
+      height: 50px;
+    }
+    
+    .ticker-item {
+      font-size: 0.8rem;
+      height: 50px;
+      padding: 0 var(--spacing-md);
+    }
+    
+    .ticker-item .category {
+      font-size: 0.7rem;
+      padding: 1px 6px;
+    }
+    
+    .ticker-item .post-title {
+      max-width: 150px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+  }
+  
+  /* Add dividers between ticker items */
+  .ticker-item:not(:last-child)::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 25%;
+    height: 50%;
+    width: 1px;
+    background-color: rgba(255, 255, 255, 0.1);
   }

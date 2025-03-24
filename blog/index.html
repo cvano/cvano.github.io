@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Clay VanOphem">
+    <meta name="description" content="Clay VanOphem's Blog">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <!-- Metadata for Open Graph Protocol -->
+    <meta property="og:title" content="Clay VanOphem's Blog">
+    <meta property="og:site_name" content="Clay VanOphem">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="cvano.github.io/blog">
+    <meta property="og:locale" content="en_US">
+
+    <link rel="stylesheet" type="text/css" href="../style.css">
+    <link rel="stylesheet" type="text/css" href="blog-style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <title>Clay VanOphem - Blog</title>
+  </head>
+  <body>
+    <div class="dot-pattern"></div>
+    <div class="container">
+      <header>
+        <h1>Clay VanOphem</h1>
+        <nav>
+          <a href="../index.html" class="nav-link">Home</a>
+          <a href="/blog" class="nav-link active">Blog</a>
+          <a href="https://www.linkedin.com/in/clay-vanophem/" class="social-link">LinkedIn</a>
+          <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark/light mode">
+            <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="5"></circle>
+              <line x1="12" y1="1" x2="12" y2="3"></line>
+              <line x1="12" y1="21" x2="12" y2="23"></line>
+              <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+              <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+              <line x1="1" y1="12" x2="3" y2="12"></line>
+              <line x1="21" y1="12" x2="23" y2="12"></line>
+              <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+              <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+            </svg>
+            <svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+            </svg>
+          </button>
+        </nav>
+      </header>
+
+      <main class="blog-main">
+        <section class="blog-intro">
+          <h2>My Blog</h2>
+          <p>Thoughts on anything from software engineering to life in general.</p>
+        </section>
+
+        <section class="blog-categories">
+          <div class="category-filters">
+            <button class="category-btn active" data-category="all">All Posts</button>
+            <button class="category-btn" data-category="Tech">Tech</button>
+            <button class="category-btn" data-category="NYC">NYC</button>
+            <button class="category-btn" data-category="Finance">Finance</button>
+            <button class="category-btn" data-category="Code">Code</button>
+          </div>
+        </section>
+        
+        <section class="blog-posts">
+          <article class="blog-post" data-categories="Tech,Code">
+            <div class="post-date">
+              <span class="day">15</span>
+              <span class="month">Mar</span>
+            </div>
+            <div class="post-content">
+              <div class="post-categories">
+                <span class="category">Tech</span>
+                <span class="category">Code</span>
+              </div>
+              <h3><a href="posts/react-dev-environment.html">Setting Up a React Dev Environment</a></h3>
+              <p class="post-excerpt">A comprehensive guide to creating a modern, efficient React development environment with all the essential tools and extensions.</p>
+              <a href="posts/react-dev-environment.html" class="read-more">Read More</a>
+            </div>
+          </article>
+
+          <article class="blog-post" data-categories="NYC">
+            <div class="post-date">
+              <span class="day">10</span>
+              <span class="month">Mar</span>
+            </div>
+            <div class="post-content">
+              <div class="post-categories">
+                <span class="category">NYC</span>
+              </div>
+              <h3><a href="posts/nyc-coffee-shops.html">Best Coffee Shops for Working</a></h3>
+              <p class="post-excerpt">My favorite spots in New York City to grab a coffee and get some work done, with details on wifi quality, seating, and atmosphere.</p>
+              <a href="posts/nyc-coffee-shops.html" class="read-more">Read More</a>
+            </div>
+          </article>
+
+          <article class="blog-post" data-categories="Finance,Tech">
+            <div class="post-date">
+              <span class="day">05</span>
+              <span class="month">Mar</span>
+            </div>
+            <div class="post-content">
+              <div class="post-categories">
+                <span class="category">Finance</span>
+                <span class="category">Tech</span>
+              </div>
+              <h3><a href="posts/bloomberg-terminal.html">Understanding Bloomberg Terminal</a></h3>
+              <p class="post-excerpt">A beginner's introduction to the Bloomberg Terminal: what it is, why it matters, and how to get started with its powerful features.</p>
+              <a href="posts/bloomberg-terminal.html" class="read-more">Read More</a>
+            </div>
+          </article>
+
+          <article class="blog-post" data-categories="Code">
+            <div class="post-date">
+              <span class="day">28</span>
+              <span class="month">Feb</span>
+            </div>
+            <div class="post-content">
+              <div class="post-categories">
+                <span class="category">Code</span>
+              </div>
+              <h3><a href="posts/css-grid-vs-flexbox.html">CSS Grid vs Flexbox</a></h3>
+              <p class="post-excerpt">Comparing two powerful CSS layout systems and exploring when to use each one for optimal website design and responsive layouts.</p>
+              <a href="posts/css-grid-vs-flexbox.html" class="read-more">Read More</a>
+            </div>
+          </article>
+
+          <article class="blog-post" data-categories="NYC">
+            <div class="post-date">
+              <span class="day">20</span>
+              <span class="month">Feb</span>
+            </div>
+            <div class="post-content">
+              <div class="post-categories">
+                <span class="category">NYC</span>
+              </div>
+              <h3><a href="posts/moving-to-nyc.html">Moving to New York City</a></h3>
+              <p class="post-excerpt">My experience relocating to NYC, with tips on apartment hunting, neighborhood selection, and adjusting to city life as a newcomer.</p>
+              <a href="posts/moving-to-nyc.html" class="read-more">Read More</a>
+            </div>
+          </article>
+        </section>
+
+        <!-- <div class="pagination">
+          <span class="page-number current">1</span>
+          <a href="#" class="page-number">2</a>
+          <a href="#" class="page-number">3</a>
+          <a href="#" class="page-btn next">Next →</a>
+        </div> -->
+      </main>
+
+      <footer>
+        <div class="market-graphic">
+          <div class="chart-container">
+            <div class="chart-line"></div>
+            <div class="chart-points">
+              <span class="point" style="--x: 5%; --y: 70%"></span>
+              <span class="point" style="--x: 15%; --y: 45%"></span>
+              <span class="point" style="--x: 25%; --y: 60%"></span>
+              <span class="point" style="--x: 35%; --y: 30%"></span>
+              <span class="point" style="--x: 45%; --y: 40%"></span>
+              <span class="point" style="--x: 55%; --y: 25%"></span>
+              <span class="point" style="--x: 65%; --y: 15%"></span>
+              <span class="point" style="--x: 75%; --y: 30%"></span>
+              <span class="point" style="--x: 85%; --y: 20%"></span>
+              <span class="point" style="--x: 95%; --y: 10%"></span>
+            </div>
+          </div>
+          <div class="ticker-tape">
+            <div class="ticker-content">
+              <span class="ticker-item">BLOG <span class="category">Tech</span> <span class="post-title">Setting Up a React Dev Environment</span> <span class="date">03.15</span></span>
+              <span class="ticker-item">BLOG <span class="category">NYC</span> <span class="post-title">Best Coffee Shops for Working</span> <span class="date">03.10</span></span>
+              <span class="ticker-item">BLOG <span class="category">Finance</span> <span class="post-title">Understanding Bloomberg Terminal</span> <span class="date">03.05</span></span>
+              <span class="ticker-item">BLOG <span class="category">Code</span> <span class="post-title">CSS Grid vs Flexbox</span> <span class="date">02.28</span></span>
+              <span class="ticker-item">BLOG <span class="category">NYC</span> <span class="post-title">Moving to New York City</span> <span class="date">02.20</span></span>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script>
+      // Theme toggle functionality
+      const themeToggle = document.getElementById('theme-toggle');
+      const body = document.body;
+      
+      // Check for saved theme preference or use device preference
+      const savedTheme = localStorage.getItem('theme');
+      
+      if (savedTheme === 'light') {
+        body.classList.add('light-theme');
+      } else if (savedTheme === null && window.matchMedia('(prefers-color-scheme: light)').matches) {
+        body.classList.add('light-theme');
+      }
+      
+      // Toggle theme on button click
+      themeToggle.addEventListener('click', () => {
+        body.classList.toggle('light-theme');
+        
+        // Save preference to localStorage
+        if (body.classList.contains('light-theme')) {
+          localStorage.setItem('theme', 'light');
+        } else {
+          localStorage.setItem('theme', 'dark');
+        }
+      });
+
+      // Blog category filtering
+      document.addEventListener('DOMContentLoaded', function() {
+        const categoryButtons = document.querySelectorAll('.category-btn');
+        const blogPosts = document.querySelectorAll('.blog-post');
+        
+        categoryButtons.forEach(button => {
+          button.addEventListener('click', () => {
+            // Remove active class from all buttons
+            categoryButtons.forEach(btn => btn.classList.remove('active'));
+            
+            // Add active class to clicked button
+            button.classList.add('active');
+            
+            const category = button.getAttribute('data-category');
+            
+            blogPosts.forEach(post => {
+              if (category === 'all') {
+                post.style.display = 'flex';
+              } else {
+                const postCategories = post.getAttribute('data-categories').split(',');
+                if (postCategories.includes(category)) {
+                  post.style.display = 'flex';
+                } else {
+                  post.style.display = 'none';
+                }
+              }
+            });
+          });
+        });
+      });
+    </script>
+  </body>
+</html>

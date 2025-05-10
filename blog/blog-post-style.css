@@ -14,7 +14,7 @@
   .post-header {
     margin-bottom: var(--spacing-xl);
     padding-bottom: var(--spacing-lg);
-    border-bottom: 1px solid var(--border-color);
+    border-bottom: 2px solid var(--highlight);
   }
   
   .post-meta {

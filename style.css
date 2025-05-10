@@ -13,7 +13,7 @@
   --text-primary: var(--white);
   --text-secondary: rgba(255, 255, 255, 0.7);
   --border-color: rgba(255, 255, 255, 0.1);
-  --dot-color: rgba(255, 255, 255, 0.15);
+  --dot-color: rgba(255, 255, 255, 0.25);
   --card-bg: rgba(0, 0, 0, 0.5);
   --heading-gradient-start: var(--white);
   --heading-gradient-end: rgba(255, 255, 255, 0.8);
